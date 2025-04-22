@@ -1,21 +1,60 @@
 import { StatusBar } from "expo-status-bar";
 import { Button, SafeAreaView, StyleSheet, Text, View } from "react-native";
-import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import HomeScreen from "./HomeScreen.js";
-
-const stack = createNativeStackNavigator();
 
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <NavigationContainer>
-        <Stack.Screen
-          name="Home"
-          componant={HomeScreen}
-          option={{ title: "Welcome" }}
-        />
-      </NavigationContainer>
+      <View
+        style={{
+          margin: 50,
+          backgroundColor: "#777",
+          padding: 20,
+          width: 250,
+          borderRadius: 30,
+        }}
+      >
+        <Button title="GAME">
+          <Text>GAME</Text>
+        </Button>
+      </View>
+      <View>
+        <View
+          style={{
+            backgroundColor: "blue",
+            width: 900,
+            padding: 10,
+            borderWidth: 3,
+          }}
+        >
+          <Button title="Practice">
+            <Text>Practice</Text>
+          </Button>
+        </View>
+        <View
+          style={{
+            backgroundColor: "pink",
+            width: 900,
+            padding: 10,
+            borderWidth: 3,
+          }}
+        >
+          <Button title="Interactions">
+            <Text>Interactions</Text>
+          </Button>
+        </View>
+        <View
+          style={{
+            backgroundColor: "blue",
+            width: 900,
+            padding: 10,
+            borderWidth: 3,
+          }}
+        >
+          <Button title="Literacy">
+            <Text>Literacy</Text>
+          </Button>
+        </View>
+      </View>
     </SafeAreaView>
   );
 }
